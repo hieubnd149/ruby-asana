@@ -1,0 +1,41 @@
+goals: 
+    create_goals: >-
+        require 'asana'
+
+
+        client = Asana::Client.new do |c|
+            c.authentication :access_token, 'PERSONAL_ACCESS_TOKEN'
+        end
+
+
+        result = client.goals.create_goals(field: "value", field: "value", options: {pretty: true})
+    delete_goal: >-
+        require 'asana'
+
+
+        client = Asana::Client.new do |c|
+            c.authentication :access_token, 'PERSONAL_ACCESS_TOKEN'
+        end
+
+
+        result = client.goals.delete_goal(goal_gid: 'goal_gid', options: {pretty: true})
+    get_goal: >-
+        require 'asana'
+
+
+        client = Asana::Client.new do |c|
+            c.authentication :access_token, 'PERSONAL_ACCESS_TOKEN'
+        end
+
+
+        result = client.goals.get_goal(goal_gid: 'goal_gid', param: "value", param: "value", options: {pretty: true})
+    update_goal: >-
+        require 'asana'
+
+
+        client = Asana::Client.new do |c|
+            c.authentication :access_token, 'PERSONAL_ACCESS_TOKEN'
+        end
+
+
+        result = client.goals.update_goal(goal_gid: 'goal_gid', field: "value", field: "value", options: {pretty: true})
